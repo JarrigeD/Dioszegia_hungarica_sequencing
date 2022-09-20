@@ -14630,8 +14630,16 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 </div>
-</div># bash command line
-cat results/*.tmp  > results/results_blast_wgs_v2_97perc.tsv
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Bash command line:
+<code>cat results/*.tmp  &gt; results/results_blast_wgs_v2_97perc.tsv</code></p>
+
+</div>
+</div>
+</div>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14639,19 +14647,33 @@ cat results/*.tmp  > results/results_blast_wgs_v2_97perc.tsv
 <h4 id="Recovering-negative-MEGABLAST-results">Recovering negative MEGABLAST results<a class="anchor-link" href="#Recovering-negative-MEGABLAST-results">&#182;</a></h4>
 </div>
 </div>
-</div># bash command line
-grep --text -B 1 "0 hits" results_blast_wgs_v2.tsv | grep Database | cut -f 3 -d " " > list_0_hits_wholeITS.txt
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Bash command line:
+<code>grep --text -B 1 "0 hits" results_blast_wgs_v2.tsv | grep Database | cut -f 3 -d " " &gt; list_0_hits_wholeITS.txt</code></p>
+
+</div>
+</div>
+</div>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Recovering-and-formatting-positive-MEGABLAST-results">Recovering and formatting positive MEGABLAST results<a class="anchor-link" href="#Recovering-and-formatting-positive-MEGABLAST-results">&#182;</a></h4>
 </div>
 </div>
-</div># bash command line
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Bash command lines:</p>
+<p><code>echo query_acc_ver,subject_acc_ver,%identity,alignment_length,mismatches,gap_opens,q_start,q_end,s_start,s_end,evalue,bit_score &gt; results_blast_wgs_v2_97perc.csv</code></p>
+<p><code>cat results_blast_wgs_v2_97perc.tsv | grep -v -F "#" | tr "\t" "," &gt;&gt; results_blast_wgs_v2_97perc.csv</code></p>
 
-echo query_acc_ver,subject_acc_ver,%identity,alignment_length,mismatches,gap_opens,q_start,q_end,s_start,s_end,evalue,bit_score > results_blast_wgs_v2_97perc.csv
-
-cat results_blast_wgs_v2_97perc.tsv | grep -v -F "#" | tr "\t" "," >> results_blast_wgs_v2_97perc.csv
+</div>
+</div>
+</div>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14720,9 +14742,6 @@ cat results_blast_wgs_v2_97perc.tsv | grep -v -F "#" | tr "\t" "," >> results_bl
     <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">accession</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">wgs_v2_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">m</span><span class="p">,</span> <span class="s2">&quot;subject_acc_ver&quot;</span><span class="p">]))</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">match</span><span class="p">):</span>
         <span class="n">wgs_v2_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">m</span><span class="p">,</span> <span class="s2">&quot;Run&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">match</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        
-<span class="c1"># list of all accessions with BLAST hits</span>
-<span class="c1">#list_unsure_accession = list(wgs_v2_df.groupby(&quot;Run&quot;).count().index)</span>
 </pre></div>
 
      </div>
