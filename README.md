@@ -3,4 +3,4 @@
 
 [Geographical and environmental distribution of _D. hungarica_](https://jarriged.github.io/Dioszegia_hungarica_sequencing/scripts/Dioszegia_spacial_analyses_notebook.html)
 
-[Transposable elements mining in _D. hungarica_ PDD-24b-2] (https://jarriged.github.io/Dioszegia_hungarica_sequencing/scripts/Dioszegia_TE_mining_notebook.html)
+[Transposable elements mining in _D. hungarica_ PDD-24b-2](https://jarriged.github.io/Dioszegia_hungarica_sequencing/scripts/Dioszegia_TE_mining_notebook.html)
