@@ -14600,8 +14600,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Building-TE-library">Building TE library<a class="anchor-link" href="#Building-TE-library">&#182;</a></h2><p>Transposable elements (TE) were searched using protein homology to know TE from other fungi and two <em>de novo</em> methods (RepeatModeler and EDTA).</p>
-<h3 id="Protein-homology-method">Protein homology method<a class="anchor-link" href="#Protein-homology-method">&#182;</a></h3><p>BLAST+tblastx v2.11.0 was used with curated intern TE sequences (with their typical TE protein domains) from other fungi (<em>Saitozyma podzolica</em>, <em>Cryptococcus neoformans</em>, <em>Cryptococcus gattii</em>, <em>Rhodotorula toruloides</em>, <em>Candida glabrata</em>) as queries (exemple command line below)</p>
+<h2 id="Building-TE-library">Building TE library<a class="anchor-link" href="#Building-TE-library">&#182;</a></h2><p>Transposable elements (TE) were searched using protein homology to known TE from other fungi and two <em>de novo</em> methods (RepeatModeler and EDTA).</p>
+<h3 id="Protein-homology-method">Protein homology method<a class="anchor-link" href="#Protein-homology-method">&#182;</a></h3><p>BLAST+tblastx v2.11.0 was used with curated intern TE sequences (with their typical TE protein domains) from other fungi (<em>Saitozyma podzolica</em>, <em>Cryptococcus neoformans</em>, <em>Cryptococcus gattii</em>, <em>Rhodotorula toruloides</em>, <em>Candida glabrata</em>) as queries (exemple command line below).</p>
 
 </div>
 </div>
@@ -14643,7 +14643,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The results table have the following format:</p>
+<p>The results tables have the following format:</p>
 
 </div>
 </div>
@@ -14954,7 +14954,7 @@ File: contig_16_putative_Mock_TE_6.fasta
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><code>BuildDatabase -name Dioszegia_hungarica Diohu1_AssemblyScaffolds.fasta</code></p>
 <p><code>RepeatModeler -database Dioszegia_hungarica -LTRStruct &gt;&amp; repeat_modeler/repeat_modeler.log</code></p>
-<p>A fasta putative library was produced.</p>
+<p>A multifasta library of putative TE was produced.</p>
 
 </div>
 </div>
@@ -14962,9 +14962,9 @@ File: contig_16_putative_Mock_TE_6.fasta
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="EDTA-de-novo-method">EDTA <em>de novo</em> method<a class="anchor-link" href="#EDTA-de-novo-method">&#182;</a></h3><p>Extensive de novo TE Annotator (EDTA) pipeline <a href="https://doi.org/10.1111/1755-0998.13489">(Bell et al. 2022)</a> available here: <a href="https://github.com/oushujun/EDTA">https://github.com/oushujun/EDTA</a></p>
+<h3 id="EDTA-de-novo-method">EDTA <em>de novo</em> method<a class="anchor-link" href="#EDTA-de-novo-method">&#182;</a></h3><p>The Extensive de novo TE Annotator (EDTA) pipeline <a href="https://doi.org/10.1111/1755-0998.13489">(Bell et al. 2022)</a> is available here: <a href="https://github.com/oushujun/EDTA">https://github.com/oushujun/EDTA</a></p>
 <p><code>perl EDTA.pl --genome Diohu1_AssemblyScaffolds.fasta</code></p>
-<p>A fasta putative library was produced.</p>
+<p>A multifasta library of putative TE was produced.</p>
 
 </div>
 </div>
@@ -14979,7 +14979,7 @@ File: contig_16_putative_Mock_TE_6.fasta
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Protein domains typical of TE (transposase, reverse transcriptase, RNase H, integrase, aspartic protease, gag domains) were then searched in the putative sequences from the three methods with <a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi">CD Search </a>.</p>
+<p>Protein domains typical of TE (transposase, reverse transcriptase, RNase H, integrase, aspartic protease, gag domains) were then searched in the putative sequences from the three methods with CD Search (<a href="https://doi.org/10.1093/nar/gkh454">Marchler-Bauer and Bryant 2004</a>; <a href="https://doi.org/10.1093/nar/gkw1129">Marchler-Bauer et al. 2017</a>). CD Search is accessible here: <a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi">https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi</a>.</p>
 <p>Terminal inverted repeats (TIR) and Target Site Duplications (TSD) were also searched to classify the TE according to <a href="https://doi.org/10.1038/nrg2165">(Wicker et al. 2007)</a>.</p>
 <p><strong>For each TE family a unique candidate with TE domains was selected for the final library (see File S1)</strong></p>
 
@@ -14998,7 +14998,7 @@ File: contig_16_putative_Mock_TE_6.fasta
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><code>RepeatMasker -lib Supplementary_file_S1_for_RM.fasta Diohu1_AssemblyScaffolds.fasta -dir repeatmasker/ -pa 8</code></p>
-<p>The RepeatMasker out file was then parsed, to assemble the TE fragments, with the perl tool "One code to find them all" <a href="https://doi.org/10.1186/1759-8753-5-13">(Bailly-Bechet et al. 2014)</a>, available here: <a href="http://doua.prabi.fr/software/one-code-to-find-them-all">http://doua.prabi.fr/software/one-code-to-find-them-all</a></p>
+<p>The RepeatMasker outpule file was then parsed, to assemble the TE fragments, with the perl tool "One code to find them all" <a href="https://doi.org/10.1186/1759-8753-5-13">(Bailly-Bechet et al. 2014)</a>, available here: <a href="http://doua.prabi.fr/software/one-code-to-find-them-all">http://doua.prabi.fr/software/one-code-to-find-them-all</a></p>
 
 </div>
 </div>
