@@ -1,0 +1,33 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "codeRepository": "git+https://github.com/JarrigeD/Dioszegia_hungarica_sequencing.git",
+    "name": "Dioszegia_hungarica_sequencing",
+    "description": "Dioszegia hungarica PDD-24b-2 whole genome sequencing article bioinformatics methods.",
+    "applicationCategory": "Biology",
+    "funding": "ANR-19-CE01-0004-02",
+    "referencePublication": "https://doi.org/10.1093/g3journal/jkac282",
+    "keywords": [
+        "Genome",
+        "yeast",
+        "transposable element",
+        "visualisation"
+    ],
+    "programmingLanguage": [
+        "HTML",
+        "JupyterNotebook",
+        "Shell"
+    ],
+    "author": [
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0002-0633-8999",
+            "givenName": "Domitille",
+            "familyName": "Jarrige",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Génétique Moléculaire, Génomique, Microbiologie (GMGM), Université de Strasbourg, UMR 7156 CNRS, Strasbourg, France"
+            }
+        }
+    ]
+}
